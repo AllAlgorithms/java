@@ -9,7 +9,13 @@ import java.util.Scanner;
 public class Ceasercipher {
 
     public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-
+    
+    /**
+     * Encryption using plaintext and shiftkey
+     * @param plainText
+     * @param shiftKey
+     * @return
+     */
     public static String encrypt(String plainText, int shiftKey)
     {
         plainText = plainText.toLowerCase();
@@ -24,6 +30,12 @@ public class Ceasercipher {
         return cipherText;
     }
 
+    /**
+     * Decryption using encrypted value and shift key which used in encryption.
+     * @param cipherText
+     * @param shiftKey
+     * @return
+     */
     public static String decrypt(String cipherText, int shiftKey)
     {
         cipherText = cipherText.toLowerCase();
