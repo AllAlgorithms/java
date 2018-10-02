@@ -1,0 +1,27 @@
+/**
+ * Problem: given an array A, determine the maximum sum of a subarray of A.
+ * In other words, which is the biggest sum that can be achieved from consecutive elements.
+ */
+public class MaximumSumSubaArray {
+
+    public static int calcMaximumSumSubArray(int[] A) {
+        int max = A[0];
+        int[] sum_so_far = new int[A.length];
+
+        sum_so_far[0] = A[0];
+
+        for (int i = 1; i < A.length; i++) {
+            // sum of previous sum so far and current element
+            int sum_with_current = sum_so_far[i - 1] + A[i];
+
+            // is adding new element to the previous sum greater than just taking the current element?
+            sum_so_far[i] = Math.max(A[i], sum_with_current);
+
+            // is the new sum greater than the current max?
+            max = Math.max(max, sum_so_far[i]);
+        }
+
+        return max;
+    }
+    
+}
