@@ -1,5 +1,3 @@
-package DynamicProgramming;
-
 import java.util.Scanner;
 
 public class MinEditsToConvertStr1ToStr2 {
