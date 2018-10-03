@@ -1,4 +1,9 @@
-package algos.practice;
+/**
+ * To find the Tree with no siblings -  implementation in Java
+ * 
+ * @author: {Sudheer Reddy T}
+ * @github: {tadipatrisudheerreddy}
+ */
 
 public class TreeWithNoSiblings {
 	public static void printOnlyLeaves(TreeNode node){

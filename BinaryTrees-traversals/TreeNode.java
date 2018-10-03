@@ -1,4 +1,9 @@
-package algos.practice;
+/**
+ * Binary Tree Node implementation in Java
+ * 
+ * @author: {Sudheer Reddy T}
+ * @github: {tadipatrisudheerreddy}
+ */
 
 public class TreeNode {
 	

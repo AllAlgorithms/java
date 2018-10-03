@@ -1,4 +1,9 @@
-package algos.practice;
+/**
+ * To find Lowest Common Ancestor for a binary tree implementation in Java
+ * 
+ * @author: {Sudheer Reddy T}
+ * @github: {tadipatrisudheerreddy}
+ */
 
 public  class LowestCommonAncestor {
 
