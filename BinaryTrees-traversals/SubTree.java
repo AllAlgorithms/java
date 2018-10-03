@@ -1,5 +1,9 @@
-package algos.practice;
-
+/**
+ * Binary Tree Identical implementation in Java
+ * 
+ * @author: {Sudheer Reddy T}
+ * @github: {tadipatrisudheerreddy}
+ */
 public class SubTree {
 
 	TreeNode root1, root2;
