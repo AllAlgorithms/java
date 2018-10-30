@@ -29,7 +29,7 @@ class Node {
         return null;
     }
 
-    public void visit() {
+    private void visit() {
         if (this.left != null) {
             this.left.visit();
         }
@@ -39,7 +39,7 @@ class Node {
         }
     }
 
-    public void addNode(Node node) {
+    private void addNode(Node node) {
         if (node.value < this.value) {
             if (this.left == null) {
                 this.left = node;
@@ -60,7 +60,7 @@ class Tree {
 
     Node root;
 
-    public void addValue(int value) {
+    private void addValue(int value) {
         Node node = new Node(value);
         if (this.root == null) {
             this.root = node;
@@ -69,7 +69,7 @@ class Tree {
         }
     }
 
-    public void binaryTreeSort() {
+    private void binaryTreeSort() {
         this.root.visit();
     }
 }
