@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
 /**
- * by Chinthaka - @chikaslocalhost
- * chinthaka.sajeewi@gmail.com
- * Package : com.company
- * Date Time : 10/2/18 - 1:07 PM
+ * The All Algorithms Project
+ *
+ * @contributor @chikaslocalhost
  */
 public class Ceasercipher {
 
