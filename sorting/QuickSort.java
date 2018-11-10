@@ -96,5 +96,3 @@ public class QuickSort {
         new QuickSort().run(arr);
     }
 }
-Terms
-Pri
