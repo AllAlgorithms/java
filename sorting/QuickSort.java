@@ -1,63 +1,98 @@
 /**
  * Java implementation of quick sort
  *
- * @author Dimitris Glynatsis
- * @email dim.glynatsis@gmail.com
+ * @author Tibeyev Timur (timurtibeyev@gmail.com)
  */
 
 public class QuickSort {
-    /*
-     * If the array has less than 1 elements, the algorithm stops. Else the array is
-     * modified using the partition method that puts a[i] in its position, for all i
-     * between left and right, and reorders the rest so the recursive calls complete
-     * the sorting accordingly
+
+    /**
+     * Method responsible for sorting array.
+     *
+     * @param arr array of elements
+     * @param left start of the segment to sort
+     * @param right end of the segment to sort
      */
-    static void quicksort(int[] a, int left, int right) {
-        if (right <= left)
+    private void sort(int[] arr, int left, int right) {
+        if (left >= right) {
             return;
-        int i = partition(a, left, right);
-        quicksort(a, left, i - 1);
-        quicksort(a, i + 1, right);
-    }
-
-    /*
-     * The variable v is asigned the value of a[right] and i,j are the left and
-     * right indexes. the partition loop increases i and decreases j, while not
-     * changing the property that no element that s left from i is bigger than v and
-     * no element that is right from j is less than v. When the two indexes meet, we
-     * complete the partition swapping a[i] with a[r], an action that results in
-     * putting v in a[i] without having larger elements right from v and smaller
-     * left from it The partition loop is implemented as an infinite loop and breaks
-     * when the indexes meet.
-     */
-    static int partition(int[] a, int left, int right) {
-        int i = left - 1, j = right, v = a[right];
-        while (true) {
-            while (a[++i] < v)
-                ;
-            while (v < a[j]) {
-                j--;
-                if (j == left)
-                    break;
-            }
-            if (i >= j)
-                break;
-            int temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
         }
-        int temp = a[i];
-        a[i] = a[right];
-        a[right] = temp;
-        return i;
+
+        int i = left;
+        int j = right;
+
+        int mid = (i + j) / 2;
+        //Pivot element
+        int v = arr[mid];
+
+        while (i < j) {
+            //Find element from the left side, which is equal or greater than pivot element
+            while (arr[i] < v) {
+                i++;
+            }
+
+            //Find element from the right side, which is equal or less than pivot element
+            while (v < arr[j]) {
+                j--;
+            }
+
+            //If such elements exist, perform swapping
+            if (i <= j) {
+                swap(arr, i, j);
+                i++;
+                j--;
+            }
+        }
+
+        //Recursively sort left subarray
+        sort(arr, left, j);
+        //Recursively sort right subarray
+        sort(arr, i, right);
     }
 
-    public static void main(String[] args) {
-        int[] a = { 5, 1, 3, 6, 7, 9, 6, 212 };
-        QuickSort q = new QuickSort();
-        q.quicksort(a, 0, a.length - 1);
-        int i;
-        for (i = 0; i < a.length; i++)
-            System.out.println(a[i]);
+    /**
+     * Swaps two elements.
+     *
+     * @param arr array of elements
+     * @param i first index
+     * @param j second index
+     */
+    private void swap(int[] arr, int i, int j) {
+        int buf = arr[i];
+        arr[i] = arr[j];
+        arr[j] = buf;
+    }
+
+    /**
+     * Entry point, invokes sorting methods and prints resulting array.
+     *
+     * @param  arr  array to sort
+     */
+    public void run(int[] arr) {
+        sort(arr, 0, arr.length - 1);
+        printArray(arr);
+    }
+
+    /**
+     * Utility method to print array.
+     *
+     * @param  arr  array to print
+     */
+    private void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * {@code Main} method.
+     * Initializes {@link QuickSort} object and passes simple array to sort.
+     *
+     * @param  args  cmd arguments
+     */
+    public static void main(String args[]) {
+        int arr[] = {100, 19, 23, 1, 4 ,23, 66};
+        new QuickSort().run(arr);
     }
 }

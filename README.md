@@ -21,7 +21,7 @@
 - [Greedy Algorithms](greedy-algorithms)
 - [Graphs](graphs)
 - [Math](math)
-- [Neutral Network](neutral-network)
+- [Neural Network](neural-network)
 - [Ciphers](ciphers)
 - [Data Structures](data-structures)
 - [Dynamic Programming](dynamic-programming)
