@@ -24,9 +24,9 @@ public class MinCoinChange {
     }
 
     public static void main(String args[]) {
-        int coins[] =  {9, 6, 5, 1};
+        int coins[] = { 9, 6, 5, 1 };
         int m = coins.length;
         int value = 15;
-        System.out.println("Minimum coins is "+ minCoins(coins, m, value));
+        System.out.println("Minimum coins is " + minCoins(coins, m, value));
     }
 }

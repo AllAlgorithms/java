@@ -24,6 +24,7 @@ public class ShellSort {
 
     public static void main(String[] args) {
         int[] a = { 5, 6, 4, 9, 13, 3, 7 };
+        
         ShellSort s = new ShellSort();
 
         s.shell(a);

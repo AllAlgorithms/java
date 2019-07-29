@@ -1,11 +1,5 @@
-package br.pucrs.eo.es;
-
-
 public class LinkedList {
-
-    // Classe interna Node
     private class Node {
-
         public Integer element;
         public Node next;
 
@@ -15,11 +9,8 @@ public class LinkedList {
         }
     }
 
-    // Referência para o primeiro elemento da lista encadeada.
     private Node head;
-    // Referência para o último elemento da lista encadeada.
     private Node tail;
-    // Contador para a quantidade de elementos que a lista contem.
     private int count;
 
     /**
@@ -71,7 +62,7 @@ public class LinkedList {
      * Substitui o elemento armanzenado em uma determinada posicao da lista pelo
      * elemento indicado
      *
-     * @param index a posicao da lista
+     * @param index   a posicao da lista
      * @param element o elemento a ser armazenado na lista
      * @return o elemento armazenado anteriormente na posicao da lista
      * @throws IndexOutOfBoundsException se (index < 0 || index >= size())
@@ -87,7 +78,6 @@ public class LinkedList {
         Integer tmp = aux.element;
         aux.element = element;
         return tmp;
-
     }
 
     /**
@@ -131,8 +121,7 @@ public class LinkedList {
 
         Node aux = head;
         if (index == 0) {
-            if (tail == head) // se tiver apenas um elemento
-            {
+            if (tail == head) {
                 tail = null;
             }
             head = head.next;
@@ -159,7 +148,7 @@ public class LinkedList {
      *
      * @param element o elemento a ser buscado
      * @return o indice da primeira ocorrencia do elemento na lista, ou -1 se a
-     * lista nao contem o elemento
+     *         lista nao contem o elemento
      */
     public int indexOf(Integer element) {
         int index = 0;

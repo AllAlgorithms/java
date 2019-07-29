@@ -5,10 +5,11 @@ public class DoubleLinkedListOfInteger {
     private Node trailer;
     private int count;
 
-     private class Node {
+    private class Node {
         public Integer element;
         public Node next;
         public Node prev;
+
         public Node(Integer e) {
             element = e;
             next = null;
@@ -34,14 +35,14 @@ public class DoubleLinkedListOfInteger {
         n.next = trailer;
         last.next = n;
         trailer.prev = n;
-        count++;       
+        count++;
     }
-    
+
     /**
      * Remove the first ocurence of a element at the list
      */
     public boolean remove(Integer element) {
-         boolean achou = false;
+        boolean achou = false;
         Node aux = header.next;
 
         while (achou != true && aux != null) {
@@ -56,7 +57,7 @@ public class DoubleLinkedListOfInteger {
         }
         return achou;
     }
-    
+
     /**
      * Remove a element at index x
      */
@@ -82,7 +83,7 @@ public class DoubleLinkedListOfInteger {
         count--;
         return item;
     }
-    
+
     /**
      * See's if the list have some element x
      */
@@ -96,7 +97,7 @@ public class DoubleLinkedListOfInteger {
         }
         return false;
     }
-    
+
     /**
      * Return element at index x
      */
@@ -113,13 +114,13 @@ public class DoubleLinkedListOfInteger {
         }
         return aux.element;
     }
-    
+
     /**
      * Return index of the ocurence of the number x
      */
     public int indexOf(Integer element) {
         Node aux = header.next;
-        for(int i=0; i<count; i++) {
+        for (int i = 0; i < count; i++) {
             if (aux.element.equals(element)) {
                 return (i);
             }
@@ -127,23 +128,23 @@ public class DoubleLinkedListOfInteger {
         }
         return -1;
     }
-    
-   /**
-    * Changes the value of some index to x
-    */
+
+    /**
+     * Changes the value of some index to x
+     */
     public Integer set(int index, Integer element) {
         if ((index < 0) || (index >= count)) {
             throw new IndexOutOfBoundsException();
         }
         Node aux = header.next;
-        for(int i=0; i<index; i++) {
+        for (int i = 0; i < index; i++) {
             aux = aux.next;
         }
         Integer tmp = aux.element;
         aux.element = element;
         return tmp;
     }
-    
+
     /**
      * Esvazia a lista
      */
@@ -153,25 +154,24 @@ public class DoubleLinkedListOfInteger {
         header.next = trailer;
         trailer.prev = header;
         count = 0;
-    }    
-        
+    }
+
     /**
      * Return size
      */
     public int size() {
         return count;
     }
-    
+
     /**
      * Checks if list is empty
      */
     public boolean isEmpty() {
         return (count == 0);
     }
-        
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         StringBuilder s = new StringBuilder();
         Node aux = header.next;
         for (int i = 0; i < count; i++) {
@@ -180,10 +180,6 @@ public class DoubleLinkedListOfInteger {
             aux = aux.next;
         }
         return s.toString();
-    }    
-    
-    
-        
- 
-        
+    }
+
 }

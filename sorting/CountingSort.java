@@ -16,15 +16,15 @@ public class CountingSort {
         for (int i = 0; i < nums.length; i++) {
             temp[nums[i]]++;
         }
-        
+
         int index = 0;
-        for(int i=0; i<temp.length; i++){
-            while(temp[i] > 0){
+        for (int i = 0; i < temp.length; i++) {
+            while (temp[i] > 0) {
                 result[index++] = i;
                 temp[i]--;
             }
         }
-        
+
         return result;
     }
 
@@ -35,7 +35,7 @@ public class CountingSort {
     }
 
     public static void main(String[] args) {
-        int[] nums = {3, 2, 5, 6, 7, 1, 9, 0, 8, 6};
+        int[] nums = { 3, 2, 5, 6, 7, 1, 9, 0, 8, 6 };
         nums = countingSort(nums, 10);
         printArray(nums);
     }

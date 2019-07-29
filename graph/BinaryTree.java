@@ -77,7 +77,7 @@ class Tree {
 public class BinaryTree {
 
     public static void main(String[] args) {
-        int[] nums = {3, 2, 5, 6, 7, 1, 9, 0};
+        int[] nums = { 3, 2, 5, 6, 7, 1, 9, 0 };
         Tree tree = new Tree();
         for (int n : nums) {
             tree.addValue(n);

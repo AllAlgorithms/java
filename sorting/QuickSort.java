@@ -9,8 +9,8 @@ public class QuickSort {
     /**
      * Method responsible for sorting array.
      *
-     * @param arr array of elements
-     * @param left start of the segment to sort
+     * @param arr   array of elements
+     * @param left  start of the segment to sort
      * @param right end of the segment to sort
      */
     private void sort(int[] arr, int left, int right) {
@@ -22,21 +22,21 @@ public class QuickSort {
         int j = right;
 
         int mid = (i + j) / 2;
-        //Pivot element
+        // Pivot element
         int v = arr[mid];
 
         while (i < j) {
-            //Find element from the left side, which is equal or greater than pivot element
+            // Find element from the left side, which is equal or greater than pivot element
             while (arr[i] < v) {
                 i++;
             }
 
-            //Find element from the right side, which is equal or less than pivot element
+            // Find element from the right side, which is equal or less than pivot element
             while (v < arr[j]) {
                 j--;
             }
 
-            //If such elements exist, perform swapping
+            // If such elements exist, perform swapping
             if (i <= j) {
                 swap(arr, i, j);
                 i++;
@@ -44,9 +44,9 @@ public class QuickSort {
             }
         }
 
-        //Recursively sort left subarray
+        // Recursively sort left subarray
         sort(arr, left, j);
-        //Recursively sort right subarray
+        // Recursively sort right subarray
         sort(arr, i, right);
     }
 
@@ -54,8 +54,8 @@ public class QuickSort {
      * Swaps two elements.
      *
      * @param arr array of elements
-     * @param i first index
-     * @param j second index
+     * @param i   first index
+     * @param j   second index
      */
     private void swap(int[] arr, int i, int j) {
         int buf = arr[i];
@@ -66,7 +66,7 @@ public class QuickSort {
     /**
      * Entry point, invokes sorting methods and prints resulting array.
      *
-     * @param  arr  array to sort
+     * @param arr array to sort
      */
     public void run(int[] arr) {
         sort(arr, 0, arr.length - 1);
@@ -76,23 +76,23 @@ public class QuickSort {
     /**
      * Utility method to print array.
      *
-     * @param  arr  array to print
+     * @param arr array to print
      */
     private void printArray(int[] arr) {
         for (int i : arr) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
         System.out.println();
     }
 
     /**
-     * {@code Main} method.
-     * Initializes {@link QuickSort} object and passes simple array to sort.
+     * {@code Main} method. Initializes {@link QuickSort} object and passes simple
+     * array to sort.
      *
-     * @param  args  cmd arguments
+     * @param args cmd arguments
      */
     public static void main(String args[]) {
-        int arr[] = {100, 19, 23, 1, 4 ,23, 66};
+        int arr[] = { 100, 19, 23, 1, 4, 23, 66 };
         new QuickSort().run(arr);
     }
 }
