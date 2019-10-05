@@ -1,6 +1,6 @@
 
-// Fibonacci Series using Dynamic Programming 
-class fibonacci {
+// Fibonacci Series using Dynamic Programming
+class Fibonacci {
     static int fib(int n) {
         /* Declare an array to store Fibonacci numbers. */
         int f[] = new int[n + 2]; // 1 extra to handle case, n = 0

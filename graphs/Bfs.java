@@ -3,11 +3,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class BFS {
+public class Bfs {
 
     private Queue<Integer> queue;
 
-    public BFS() {
+    public Bfs() {
         queue = new LinkedList<Integer>();
     }
 
@@ -53,7 +53,7 @@ public class BFS {
             source = scanner.nextInt();
 
             System.out.println("The BFS traversal of the graph is ");
-            BFS bfs = new BFS();
+            Bfs bfs = new Bfs();
             bfs.bfs(adjacency_matrix, source);
 
         } catch (InputMismatchException inputMismatch) {

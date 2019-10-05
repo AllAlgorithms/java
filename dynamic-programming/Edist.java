@@ -1,7 +1,7 @@
 
 // A Naive recursive Java program to find minimum number 
 // operations to convert str1 to str2 
-class EDIST {
+class Edist {
     static int min(int x, int y, int z) {
         if (x <= y && x <= z)
             return x;

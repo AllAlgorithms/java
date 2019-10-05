@@ -1,7 +1,7 @@
 // Java program for Fibonacci Search 
 import java.util.*; 
 
-class Fibonacci 
+class FibonacciSearch 
 { 
 	// Utility function to find minimum 
 	// of two elements 
