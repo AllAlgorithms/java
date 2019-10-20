@@ -1,10 +1,10 @@
 import java.util.Arrays; 
   
-class ExponentialSearch 
+class Exponential
 { 
     // Returns position of first occurrence of 
     // x in array 
-    static int exponentialSearch(int arr[], 
+    static int Exponential(int arr[], 
                                  int n, int x) 
     { 
         // If x is present at firt location itself 
@@ -27,7 +27,7 @@ class ExponentialSearch
     { 
         int arr[] = {2, 3, 4, 10, 40}; 
         int x = 10; 
-        int result = exponentialSearch(arr, arr.length, x); 
+        int result = Exponential(arr, arr.length, x); 
           
         System.out.println((result < 0) ?  
                             "Element is not present in array" : 
