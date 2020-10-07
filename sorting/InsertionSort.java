@@ -1,4 +1,15 @@
+/**
+* Generic Insertion Sort
+* @author Jan Tabacki
+*/
+
 public class InsertionSort<T extends Comparable<? super T>> {
+    
+    /**
+    * Sort
+    * @param T[] array of not sorted elements 
+    * @return T[] array of sorted element
+     */
     public T[] Sort(T[] values) {
         if (values.length > 0) {
             T value = values[0];
